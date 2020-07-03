@@ -5,8 +5,9 @@ import android.os.Build
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
-import android.widget.Button
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import dev.lucasvillaverde.androidloginanimation.utils.DateUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -16,14 +17,35 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        updateStatusBar()
+        setAnimations()
+        updateUI()
         setBtnListeners()
     }
 
-    private fun updateStatusBar() {
+    private fun updateUI() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = Color.TRANSPARENT
         }
+
+        if (DateUtils.getDayTimePeriod() == DateUtils.MORNING) {
+            mainRootLayout.setBackgroundResource(R.drawable.good_morning_bg)
+            txtGreeting.text = "Good morning"
+            txtGreetingSubtitle.text = "Hope you're having a good day."
+        } else {
+            mainRootLayout.setBackgroundResource(R.drawable.good_night_bg)
+            txtGreeting.text = "Good night"
+            txtGreetingSubtitle.text = "Hope you're having a good night."
+        }
+
+    }
+
+    private fun setAnimations() {
+        llInputs.animation = AnimationUtils.loadAnimation(this, R.anim.animation_login_inputs)
+        txtGreeting.animation = AnimationUtils.loadAnimation(this, R.anim.animation_greeting)
+        txtGreetingSubtitle.animation = AnimationUtils.loadAnimation(this, R.anim.animation_greeting_subtitle)
+        btnSignUp.animation = AnimationUtils.loadAnimation(this, R.anim.animation_alpha_login_1500)
+        btnSignIn.animation = AnimationUtils.loadAnimation(this, R.anim.animation_alpha_login_1500)
+        txtBtnForgotPassword.animation = AnimationUtils.loadAnimation(this, R.anim.animation_alpha_login_1500)
     }
 
     private fun setBtnListeners() {

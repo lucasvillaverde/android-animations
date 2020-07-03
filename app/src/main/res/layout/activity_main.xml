@@ -27,14 +27,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <TextView
         android:id="@+id/txtGreetingSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:alpha="0.4"
+        android:alpha="0.6"
         android:fontFamily="@font/ff_quicksand"
         android:text="Hello World!"
         android:textColor="@color/colorText"
@@ -60,7 +60,7 @@
             android:id="@+id/edtUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="4dp"
             android:alpha="0.6"
             android:drawableEnd="@drawable/ic_username"
             android:fontFamily="@font/ff_ubuntu"
@@ -74,7 +74,7 @@
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:alpha="0.6"
             android:drawableEnd="@drawable/ic_password"
             android:fontFamily="@font/ff_ubuntu"
@@ -90,7 +90,7 @@
         android:id="@+id/btnSignUp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_marginStart="24dp"
         android:enabled="false"
         android:background="@drawable/bg_sign_button"
@@ -109,7 +109,7 @@
         android:id="@+id/btnSignIn"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_sign_button"
         android:fontFamily="@font/ubuntu_r"
@@ -124,15 +124,18 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <TextView
+        android:id="@+id/txtBtnForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/ubuntu_r"
         android:text="Forgot password ?"
         android:textColor="@color/colorText"
         android:textSize="18sp"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSignUp" />
+        app:layout_constraintTop_toBottomOf="@id/btnSignUp"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
