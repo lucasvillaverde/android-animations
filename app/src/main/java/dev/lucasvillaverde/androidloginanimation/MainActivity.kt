@@ -1,5 +1,6 @@
 package dev.lucasvillaverde.androidloginanimation
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -42,10 +43,12 @@ class MainActivity : AppCompatActivity() {
     private fun setAnimations() {
         llInputs.animation = AnimationUtils.loadAnimation(this, R.anim.animation_login_inputs)
         txtGreeting.animation = AnimationUtils.loadAnimation(this, R.anim.animation_greeting)
-        txtGreetingSubtitle.animation = AnimationUtils.loadAnimation(this, R.anim.animation_greeting_subtitle)
+        txtGreetingSubtitle.animation =
+            AnimationUtils.loadAnimation(this, R.anim.animation_greeting_subtitle)
         btnSignUp.animation = AnimationUtils.loadAnimation(this, R.anim.animation_alpha_login_1500)
         btnSignIn.animation = AnimationUtils.loadAnimation(this, R.anim.animation_alpha_login_1500)
-        txtBtnForgotPassword.animation = AnimationUtils.loadAnimation(this, R.anim.animation_alpha_login_1500)
+        txtBtnForgotPassword.animation =
+            AnimationUtils.loadAnimation(this, R.anim.animation_alpha_login_1500)
     }
 
     private fun setBtnListeners() {
@@ -64,5 +67,10 @@ class MainActivity : AppCompatActivity() {
             view.performClick()
             true
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, SplashActivity::class.java))
     }
 }
