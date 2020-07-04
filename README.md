@@ -1,5 +1,6 @@
 # android-animations
 - Application to practice animations with Kotlin/Android
+- **Demo video**: https://streamable.com/sozkot
 
 ## Splash Screen
 
