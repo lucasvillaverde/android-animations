@@ -54,19 +54,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtGreeting"
-        app:layout_constraintVertical_bias="0.65">
+        app:layout_constraintVertical_bias="0.62">
 
         <EditText
             android:id="@+id/edtUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:alpha="0.6"
+            android:alpha="0.8"
             android:drawableEnd="@drawable/ic_username"
             android:fontFamily="@font/ff_ubuntu"
             android:hint="Username"
             android:imeOptions="actionNext"
             android:singleLine="true"
+            android:textColor="@color/colorText"
             android:textColorHint="@color/colorText"
             android:textSize="14sp" />
 
@@ -75,12 +76,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:alpha="0.6"
+            android:alpha="0.8"
             android:drawableEnd="@drawable/ic_password"
-            android:fontFamily="@font/ff_ubuntu"
             android:hint="Password"
+            android:inputType="textPassword"
             android:imeOptions="actionDone"
             android:singleLine="true"
+            android:textColor="@color/colorText"
             android:textColorHint="@color/colorText"
             android:textSize="14sp" />
 
@@ -92,8 +94,8 @@
         android:layout_width="wrap_content"
         android:layout_height="36dp"
         android:layout_marginStart="24dp"
-        android:enabled="false"
         android:background="@drawable/bg_sign_button"
+        android:enabled="false"
         android:fontFamily="@font/ubuntu_r"
         android:paddingStart="4dp"
         android:paddingEnd="4dp"
@@ -128,14 +130,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:clickable="true"
+        android:focusable="true"
         android:fontFamily="@font/ubuntu_r"
         android:text="Forgot password ?"
         android:textColor="@color/colorText"
-        android:textSize="18sp"
-        android:clickable="true"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSignUp"
-        android:focusable="true" />
+        app:layout_constraintTop_toBottomOf="@id/btnSignUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

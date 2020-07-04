@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity() {
 
         if (DateUtils.getDayTimePeriod() == DateUtils.MORNING) {
             mainRootLayout.setBackgroundResource(R.drawable.good_morning_bg)
-            txtGreeting.text = "Good morning"
-            txtGreetingSubtitle.text = "Hope you're having a good day."
+            txtGreeting.text = getString(R.string.good_morning_text)
+            txtGreetingSubtitle.text = getString(R.string.good_morning_subtitle)
         } else {
             mainRootLayout.setBackgroundResource(R.drawable.good_night_bg)
-            txtGreeting.text = "Good night"
-            txtGreetingSubtitle.text = "Hope you're having a good night."
+            txtGreeting.text = getString(R.string.good_night_text)
+            txtGreetingSubtitle.text = getString(R.string.good_night_subtitle)
         }
 
     }
@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         btnSignIn.setOnTouchListener(onTouch())
     }
 
+    // Click button animation
     private fun onTouch(): View.OnTouchListener {
         return View.OnTouchListener { view, motionEvent ->
             when (motionEvent.action) {

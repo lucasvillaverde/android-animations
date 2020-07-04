@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/ubuntu_l"
-            android:text="Enjoy your coffee until the application is loaded..."
+            android:text="@string/loading_screen_text"
             android:textColor="@color/colorText"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"

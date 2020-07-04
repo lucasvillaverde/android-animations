@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Android Login Animation</string>
+    <string name="loading_screen_text">Enjoy your coffee until the application is loaded...</string>
+    <string name="good_morning_text">Good morning</string>
+    <string name="good_morning_subtitle">Hope you\'re having a good day.</string>
+    <string name="good_night_text">Good night</string>
+    <string name="good_night_subtitle">Hope you\'re having a good night.</string>
 </resources>

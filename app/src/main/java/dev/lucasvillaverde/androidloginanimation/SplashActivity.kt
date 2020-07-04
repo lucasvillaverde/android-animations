@@ -15,6 +15,7 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
+        // Just simulating loader... Delaying for 3 seconds.
         val handler = Handler()
         handler.postDelayed(Runnable {
             kotlin.run {
@@ -25,7 +26,6 @@ class SplashActivity : AppCompatActivity() {
 
     private fun finishLoading() {
         finish()
-
         startActivity(Intent(this, MainActivity::class.java))
     }
 }

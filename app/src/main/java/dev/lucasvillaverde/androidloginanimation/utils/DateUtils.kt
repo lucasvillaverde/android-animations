@@ -5,16 +5,16 @@ import java.util.*
 
 object DateUtils {
 
-    val MORNING = 1
-    val EVENING = 2
+    const val MORNING = 1
+    const val EVENING = 2
 
     fun getDayTimePeriod(): Int {
         val c: Calendar = Calendar.getInstance()
         val timeOfDay: Int = c.get(Calendar.HOUR_OF_DAY)
 
-        if (timeOfDay in 0..15) {
+        if (timeOfDay in 5..15) {
             return MORNING
-        } else if (timeOfDay in 16..23) {
+        } else if (timeOfDay in 16..23 || timeOfDay in 0..4) {
             return EVENING
         }
 
